@@ -1,0 +1,258 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+    line-height: 1.5;
+    padding:0;
+    margin:0;
+    background: #f4f4f4;
+}
+
+header{
+    background-color: #35424a;
+    padding-top: 15px;
+    min-height: 70px;
+    border-bottom: 3px solid red;
+}
+header nav a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:16px;
+}
+header li{
+    float:left;
+    list-style-type: none;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+#branding{
+    float:left;
+}
+header #branding h1{
+    color: #ffffff;
+    margin:0;
+}
+header ul{
+    padding:0;
+    margin:0;
+}
+header nav{
+    float:right;
+    margin-top:15px;
+}
+header .highlight, header .current a{
+    color: #e8491d;
+    font-weight: bold;
+}
+header a:hover{
+    color:#cccccc;
+    text-decoration: none;
+}
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+#education h2{
+    margin-top:20px;
+}
+#boxes{
+    margin-top:30px;
+}
+.box{
+    float:left;
+    display:block;
+    text-align:center;
+    width: 33%;
+    padding: 10px;
+}
+#boxes .box img{
+    width: 90px;
+    margin:auto;
+}
+#slider{
+    margin: 0 auto;
+}
+#carouselExampleControls {
+    margin:auto;
+    max-height: 40%;
+    max-width: 90%;
+}
+.carousel-control-next, .carousel-control-prev{
+    height:100%;
+}
+footer{
+    background-color: #e8491d;
+    text-align: center;
+    clear:both;
+}
+footer p, footer div{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#education .card{
+    background-color:#90caf9;
+    border-bottom: 1px solid #ffffff;
+    width:100%;
+    margin: auto;
+}
+.card button{
+   font-size: 25px;
+   color:white;
+   text-decoration: none;
+   margin:auto;
+}
+.card-body{
+    background-color: white;
+}
+.card button:hover{
+    text-decoration: none;
+}
+#subscribe{
+    background-color:#35424a;
+    color:white;
+    height: 100px;
+    padding:15px;
+}
+#subscribe h1{
+    float:left;
+    font-size:26px;
+    padding-top:25px;
+}
+#subscribe form{
+    float:right;
+    padding-top:25px;
+}
+#subscribe input{
+    padding:4px;
+    height:38px;
+    width:200px;
+}
+.button1{
+    color:#ffffff;
+    background:#e8491d;
+    height:38px;
+    border:0;
+    padding-left:20px;
+    padding-right:20px;
+}
+.card-header{
+    height:80px;
+    border-bottom:1px solid #ffffff;
+}
+#sport-cards{
+    width:100%;
+    margin-top:40px;
+}
+#sport-cards .card{
+    float:left;
+    width:30%;
+    margin-top:20px;
+    margin-left:20px;
+    margin-bottom:40px;
+}
+#sport-cards .card img{
+    width:50%;
+    margin-top: 20px;
+}
+.card-img-top{
+    width:220px;
+    margin:auto;
+}
+.card-body{
+    text-align:center;
+}
+.current-image{
+    margin-bottom:5px;
+}
+.current-image img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:81%;
+}
+.bottom-images{
+    text-align:center;
+    margin-bottom:40px;
+    cursor:pointer;
+}
+.bottom-images img{
+    width:20%;
+    display:inline-block;
+}
+.single-book{
+    text-align:center;
+}
+.single-book img{
+    margin:auto;
+    width:8%;
+}
+#books h2{
+    margin:30px 0 30px 0;
+}
+.single-book{
+    margin-bottom:20px;
+}
+.single-book h3{
+    text-align:center;
+}
+#movies-list h2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#movies-list{
+    margin-top: 20px;
+}
+#movies-list .card{
+    width:32%;
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+#movies-list .card img{
+    margin-top:10px;
+    height:300px;
+}
+#movies-list .card h5{
+    margin-bottom: 40px;
+}
+.separate {
+    clear:both;
+}
+.input {
+    margin-top: 100px;
+}
+@media(max-width: 768px){
+    header #branding, header nav, header nav li, #boxes .box, #subscribe h1, #subscribe form, #sport-cards .card, .single-book img, .single-book h3, #movies-list .card{
+        float:none;
+        text-align:center;
+        width:100%;
+    }
+    header{
+        padding-bottom:20px;
+    }
+    #subscribe button{
+        display:block;
+        width:100%;
+    }
+    #subscribe input{
+        display:block;
+        width:100%;
+    }
+    #subscribe h1{
+        padding:0;
+    }
+    #subscribe form{
+        padding:0;
+    }
+    #subscribe{
+        height:180px;
+    }
+    #education .card{
+        width:100%;
+    }
+    .single-book img{
+        margin-bottom: 10px;
+    }
+}
+}
