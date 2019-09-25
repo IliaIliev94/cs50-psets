@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name">
+        </div>
+        <div class="form-group">
+        <select  required class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="rank">
+            <option disabled selected value="">Rank</option>
+            <option value="Unranked">Unranked</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Master">Master</option>
+            <option value="Grandmaster">Grandmaster</option>
+            <option value="Challanger">Challanger</option>
+        </select>
+            </div>
+        <div class="form-group">
+            <div class="input">
+                <input  type="radio" name="role" value="Top" id="top">
+                <label for="top">Top</label>
+            </div>
+            <div class="input">
+                <input type="radio" name="role" value="Jungle" id="jungle">
+                <label for="jungle">Jungle</label>
+            </div>
+            <div class="input">
+                <input type="radio" name="role" value="Mid" id="mid">
+                <label for="mid">Mid</label>
+            </div>
+            <div class="input">
+                <input type="radio" name="role" value="ADC" id="adc">
+                <label for="adc">ADC</label>
+            </div>
+            <div class="input">
+                <input type="radio" name="role" value="Support" id="support">
+                <label for="support">Support</label>
+            </div>
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        /* TODO */
+        let button = document.querySelector('form');
+
+        let isChecked = false;
+
+        let inputs = document.querySelectorAll("div.input > input");
+
+        for (let i = 0; i < inputs.length(); i++) {
+            if(inputs[i].checked == true) {
+                isChecked = true;
+            }
+        }
+
+        button.addEventListener('submit', function(event) {
+
+            if(document.querySelector('#name').value == "") {
+                event.preventDefault();
+                alert("Please provide a name");
+            }
+            else if(isChecked == false) {
+                event.preventDefault();
+                alert("Please provide a role");
+            }
+
+        });
+
+    </script>
+
+{% endblock %}

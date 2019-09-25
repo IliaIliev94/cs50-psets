@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+            <form action="/compare" enctype="multipart/form-data" method="post">
+                <h4>Upload two files for comparison</h2>
+                <div class="input">
+                    <label for="file1">FILE 1: </label>
+                    <input type="file" name="file1" id="file1">
+                </div>
+                <div class="input">
+                    <label for="file2">FILE 2: </label>
+                    <input type="file" name="file2" id="file2">
+                </div>
+                <h4>Choose a method to compare the two files</h2>
+                <div class="input">
+                    <input type="radio" name="algorithm" value="lines" id="lines">
+                    <label for="lines">Compare lines</label>
+                </div>
+                <div class="input">
+                    <input type="radio" name="algorithm" value="sentences" id="sentences">
+                    <label for="sentences">Compare sentances</label>
+                </div>
+                <div class="input">
+                    <input type="radio" name="algorithm" value="substrings" id="substrings">
+                    <label for="substrings">Compare substrings</label>
+                     <input id="number" type="hidden" class="form-control" placeholder="of length n" aria-label="Username" aria-describedby="basic-addon1" name="length">
+                </div>
+                <button type="submit" id="submit-button" type="button" class="btn btn-primary btn-sm">Compare</button>
+
+        </div>
+            <!-- TODO -->
+
+        </form>
+    </div>
+
+{% endblock %}

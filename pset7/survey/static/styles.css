@@ -1,0 +1,17 @@
+/* TODO */
+
+.form-control{
+    width:250px;
+}
+#inlineFormCustomSelect {
+    width: 150px;
+}
+.input input{
+    margin-bottom: 0px;
+}
+@media(max-width: 768px){
+    .form-control, #inlineFormCustomSelect, form button {
+        width: 100%;
+        text-align:center;
+    }
+}
