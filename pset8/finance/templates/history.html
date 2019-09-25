@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      {% for key in portfolio[0] %}
+          <th scope="col">{{key.capitalize()}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for element in portfolio %}
+    <tr>
+        {% for value in element.values() %}
+            <td>{{value}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

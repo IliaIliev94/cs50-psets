@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      {% for key in quote %}
+          <th scope="col">{{key.capitalize()}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      {% for value in quote.values() %}
+          <td>{{value}}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
